@@ -4,25 +4,25 @@ cc_library(
     name = "<%= name %>",
     srcs = [
       <%- srcs.each do |src| -%>
-        <%= src.dump %>,
+        <%= src.to_s %>,
       <%- end -%>
       <%- hdrs.each do |src| -%>
-        <%= src.dump %>,
+        <%= src.to_s %>,
       <%- end -%>
     ],
     copts = [
       <%- copts.each do |flag| -%>
-        <%= flag.dump %>,
+        <%= flag.to_s %>,
       <%- end -%>
     ],
     linkopts = [
       <%- ldflags.each do |flag| -%>
-        <%= flag.dump %>,
+        <%= flag.to_s %>,
       <%- end -%>
     ],
     deps = [
       <%- deps.each do |dep| -%>
-        <%= dep.dump %>,
+        <%= dep.to_s %>,
       <%- end -%>
     ],
 )
